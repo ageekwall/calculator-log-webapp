@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <title>CalculatorWebApp</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <style>
+        * { font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:12px; padding:0px; margin:0px; }
+        p { line-height:18px; }
+        div { width:500px; margin-left:auto; margin-right:auto; font-family: cursive;}
+        #content { text-align:left;padding:5px; background:rgb(0, 0, 0); border-radius:5px; overflow-y: hidden;
+                   border:1px solid #CCC; margin-top:10px; height: 300px; color: rgb(64, 228, 23); font-family:serif;}
+        #input { border-radius:2px; border:1px solid #ccc;
+                 margin-top:10px; padding:5px; width:400px;  }
+        #status { width:200px; display:block; float:left; margin-top:15px; }
+        </style>
+    </head>
+    <body>
+        
+        <div class="card bg-light mb-3" align="center" style="width: 50rem">
+              
+            <div class="card-body">
+                <h1 align="center">Calculator WebApp</h1>
+                <h4 align="center">sync logs between users
+                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Tool calculates math expression and print the 10 most recent logs to all the connected users. ">
+                    <button class="btn btn-secondary" style="pointer-events: none;" type="button" disabled>?</button>
+                </span>
+                  </h4>
+            <div>
+                <span id="status">Connecting...</span>
+                <input type="text" id="input" disabled="disabled" class="form-control" aria-describedby="inputHelpBlock" placeholder="Enter Mathematical expression">
+                <small id="inputHelpBlock" class="form-text text-muted">
+                Your input must be legitimate mathematical expression like 2+3*5
+                </small>
+            </div>
+            <!-- content size is kept to show only 10 most recent messages-->
+              <div id="content"></div>
+            </div>
+          </div>
+        
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="./frontend.js"></script>
+        
+    </body>
+</html>;
+
+
